@@ -1,0 +1,139 @@
+body, p, div, h1, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+.todos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todos h1 {
+  color: rgba(175, 47, 47, 0.15);
+  font-size: 80px;
+}
+
+.todoContent {
+  width: 550px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
+}
+
+.todoContent > div {
+  min-height: 0;
+}
+
+.formItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.formItem input {
+  height: auto;
+  padding: 16px 16px 16px 16px;
+  font-size: 24px;
+  line-height: 1.4em;
+  outline: none;
+  border: none;
+}
+
+.formItem input:focus {
+  outline: none;
+}
+
+.todoItem {
+  position: relative;
+  display: flex;
+}
+
+.checkBtn {
+  padding: 0 20px;
+}
+
+.tools {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  border-top: 1px solid rgba(0,0,0,.2);
+}
+
+.tools > p {
+  position: absolute;
+  left: 20px;
+}
+
+.tools .radioButton {
+  border: none;
+}
+
+.tools > a {
+  position: absolute;
+  right: 20px;
+  color: #777;
+}
+
+.tools > a:hover {
+  text-decoration: underline;
+}
+
+ul.item {
+  width: 100%;
+}
+
+ul.item li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 0;
+  list-style: none;
+  font-size: 20px;
+  border-top: 1px solid rgba(0,0,0,.2);
+}
+
+.completed {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+ul.item li .checkBtn span span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+ul.item li .checkBtn span span:after {
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 18px;
+  margin-left: -4px;
+  margin-top: -10px;
+  color: #f00;
+}
+
+ul.item li.completed .checkBtn span span {
+  // background: none;
+}
+
+ul.item li:hover .deleteBtn {
+  display: block;
+}
+
+.deleteBtn {
+  display: none;
+  position: absolute;
+  right: 20px;
+  color: #cc9a9a;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.deleteBtn:hover {
+  color: #d17f7f;
+}
